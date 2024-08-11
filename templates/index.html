@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Search App</title>
+</head>
+<body id="search-page">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="search-container">
+        <h1>Search for Products</h1>
+        <form action="/search" method="post">
+            <input type="text" class="search-bar" name="query" placeholder="Enter for product" required>
+            <button type="submit" class="search-button">Search</button>
+        </form>
+
+
+
+    </div>
+
+ 
+</body>
+</html>

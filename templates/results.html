@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Search Results</title>
+</head>
+<body>
+    <section class="search-header">
+        <div>
+            <h1 style="font-size: 40px;">Search Results</h1>
+        </div>
+
+
+    </section>
+   
+    <section class="search-results">
+        <div>
+            <div>
+                <h1>Search Results for "{{ query }}"</h1>
+            </div>
+            <div>
+                <ul>
+                    {% for result in results %}
+                        <li>
+                            <a href="{{ result.url }}">{{ result.title }}</a><br>
+                            Price: {{ result.price }}<br>
+                            Page: {{ result.page }}
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="search-footer">
+        <div>
+            <a href="/">Back to Search</a>
+        </div>
+
+    </section>
+    
+</body>
+</html>
